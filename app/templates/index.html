@@ -1,0 +1,26 @@
+<!-- base.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+
+<h1>Youtube stats</h1>
+
+{% if viewCount %}
+
+	<p> The view count is {{ viewCount }} </p>
+	<p> The like count is {{ likeCount }} </p>
+
+{% endif %}
+
+{% if videoThumb %}
+
+	<img src=" {{ videoThumb }} "</img> 
+
+{% endif %}
+
+
+{% endblock %}
+
+
+
