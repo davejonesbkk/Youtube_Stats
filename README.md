@@ -6,7 +6,7 @@ This is a basic Flask app that will return stats from a given video ID such as v
 
 Go to <a href="https://console.developers.google.com">Google Develope Console</a> using any Google account.
 
-In the top right of the screen click 'Select project' then 'New project', give it any name then hit 'Create'
+In the top right of the screen click <i>'Select project'</i> then 'New project', give it any name then hit 'Create'
 
 When you are in the Dashboard of your project click ' + Enable APIs and Services ' search for 'YouTube Data API v3' click its icon and then the 'Enable' button.
 
@@ -21,7 +21,9 @@ API_KEY="YOUR API KEY HERE"
 
 #Create a Python3 virual environment
 
+```
 virtualenv -p python3 envname
+```
 
 #Install all requirements (needs pip)
 
