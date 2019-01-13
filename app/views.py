@@ -6,11 +6,14 @@ from app import app
 
 import requests, json
 
+import keys
+API_KEY = keys.API_KEY
+
 parameters = {'part': 'statistics', 'id': 'qKJWsh6fjhI',
-			'key': 'YOUR_KEY_HERE'}
+			'key': API_KEY}
 
 parameters_thumbs = {'part': 'snippet', 'id': 'qKJWsh6fjhI',
-			'key': 'YOUR_KEY_HERE'}
+			'key': API_KEY}
 
 headers = {'Content-Type': 'application/json'}
 
