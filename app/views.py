@@ -30,14 +30,28 @@ def index():
 
 	thumbs_data = json.loads(ret_thumbs.text)
 
-	viewCount = stats_data['items'][0]['statistics']['viewCount']
+	viewCount = int(stats_data['items'][0]['statistics']['viewCount'])
 
-	likeCount = stats_data['items'][0]['statistics']['likeCount']
+	likeCount = int(stats_data['items'][0]['statistics']['likeCount'])
+
+	dislikeCount = int(stats_data['items'][0]['statistics']['dislikeCount'])
 
 	videoThumb = thumbs_data['items'][0]['snippet']['thumbnails']['standard']['url']
 
+	if likeCount >= dislikeCount:
 
-	return render_template('index.html', viewCount=viewCount, likeCount=likeCount, videoThumb=videoThumb)
+		likesRatio = (dislikeCount / likeCount * 100)
+		likesRatio = round(100 - likesRatio)
+		
+
+	else:
+		likesRatio = (dislikeCount / likeCount * 100)
+		likesRatio = round(100 - likesRatio)
+		
+
+
+	return render_template('index.html', viewCount=viewCount, likeCount=likeCount, dislikeCount=dislikeCount,
+	 videoThumb=videoThumb, likesRatio=likesRatio)
 
 
 
