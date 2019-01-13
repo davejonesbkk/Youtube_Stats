@@ -2,7 +2,7 @@
 
 This is a basic Flask app that will return stats from a given video ID such as views, likes etc and the video thumbnail.
 
-<b>Setting up Youtube API access</b>
+<h3>Setting up Youtube API access</h3>
 
 Go to <a href="https://console.developers.google.com">Google Develope Console</a> using any Google account.
 
@@ -17,24 +17,25 @@ Copy this API key and create a new file in your directory called keys.py like th
 API_KEY="YOUR API KEY HERE"
 
 
-<b>Local Installation & setup</b>
+<h3>Local Installation & setup</h3>
 
-#Create a Python3 virual environment
+<b>Create a Python3 virual environment</b>
 
 ```
 virtualenv -p python3 envname
 ```
 
-#Install all requirements (needs pip)
+<b>Install all requirements (needs pip)</b>
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
-In the same directory as run.py:
+<b>In the same directory as run.py:</b>
 
-export FLASK_APP=run.py
+```export FLASK_APP=run.py
 
 flask run
+```
 
-Then go to 127.0.0.1:5000 in your browser
+<b>Then go to 127.0.0.1:5000 in your browser</b>
 
 
