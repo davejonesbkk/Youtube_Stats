@@ -31,7 +31,8 @@ virtualenv -p python3 envname
 
 <b>In the same directory as run.py:</b>
 
-```export FLASK_APP=run.py
+```
+export FLASK_APP=run.py
 
 flask run
 ```
